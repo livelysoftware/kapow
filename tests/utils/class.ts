@@ -6,8 +6,14 @@ export default class TestClass {
 
   @validate
   public add(
-    @kapow({ required: true }) a,
-    @kapow({ required: true }) b
+    @kapow({
+      required: true,
+      type: "number"
+    }) a,
+    @kapow({
+      required: true,
+      type: "number"
+    }) b
   ) {
     return a + b;
   }

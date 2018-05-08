@@ -11,8 +11,6 @@ export function kapow(options: KapowOptions) {
   return function (target: Object, propertyKey: string | symbol, parameterIndex: number) {
     let requirements: any[] = Reflect.getOwnMetadata(kapowMetadataKey, target, propertyKey) || [];
 
-    console.log(propertyKey);
-
     if (options.required) {
       requirements.push({ index: parameterIndex, options });
     }
@@ -34,7 +32,9 @@ export function validate(target: any, propertyName: string, descriptor: TypedPro
         throw new Error("Missing required argument")
       }
 
-      // if (requirement.options.)
+      if (requirement.options.type) {
+        ow(parameter, ow[requirement.options.type]);
+      }
     }
 
     return method.apply(this, arguments);
