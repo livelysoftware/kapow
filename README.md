@@ -43,6 +43,18 @@ class MyClass {
 
 ```
 
+## Supported Options
+
+- `required`
+  - Type: `boolean`
+  - Default: `false`
+  - When set to true, throws an error if the parameter does not exist
+
+- `type`
+  - Type: `string`
+  - Default: `any`
+  - Validates provided input based on type
+
 ## TODO
 
 - [ ] Full (or as much as possible) API support for [ow](https://github.com/sindresorhus/ow)
