@@ -30,9 +30,11 @@ export function validate(target: any, propertyName: string, descriptor: TypedPro
     for (let requirement of requirements) {
       const parameter = arguments[requirement.index];
 
-      if (requirement.options.required && !parameter) {
+      if (requirement.options.required && typeof parameter === "undefined") {
         throw new Error("Missing required argument")
       }
+
+      // if (requirement.options.)
     }
 
     return method.apply(this, arguments);
