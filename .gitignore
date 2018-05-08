@@ -1,0 +1,11 @@
+node_modules/
+
+src/**/*.js
+src/**/*.js.map
+
+build/
+
+tests/**/*.js
+tests/**/*.js.map
+tests/**/*.test.js
+tests/**/*.test.js.map

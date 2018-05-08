@@ -1,0 +1,31 @@
+{
+  "name": "kapow",
+  "version": "0.0.1",
+  "description": "Parameter validation with decorators",
+  "main": "build/index.js",
+  "scripts": {
+    "compile": "./node_modules/.bin/tsc",
+    "compile:dev": "./node_modules/.bin/tsc --watch",
+    "test": "./node_modules/.bin/tsc && ./node_modules/.bin/tsc -p tests && ./node_modules/.bin/ava",
+    "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livelysoftware/kapow.git"
+  },
+  "author": "Andrew Lively <andrew@lively.software>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/livelysoftware/kapow/issues"
+  },
+  "homepage": "https://github.com/livelysoftware/kapow#readme",
+  "dependencies": {
+    "ow": "^0.3.0",
+    "reflect-metadata": "^0.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^10.0.4",
+    "ava": "^0.25.0",
+    "typescript": "^2.8.3"
+  }
+}
