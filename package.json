@@ -1,5 +1,5 @@
 {
-  "name": "kapow",
+  "name": "@livelysoftware/kapow",
   "version": "0.0.1",
   "description": "Parameter validation with decorators",
   "main": "build/index.js",
